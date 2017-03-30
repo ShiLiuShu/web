@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>taobaoApi</title>
+    <link rel="stylesheet" type="text/css" href="css/taobao.css">
+</head>
+<body>
+    <div class="main">
+        <!--顶部导航-->
+        <div class="top_nav">
+            <div class="logo">
+                <a href="#"><img src="img/alibaba_logo.png">淘宝开放平台</a>
+            </div>
+            <div class="nav-left">
+                <ul class="ul-nav-top">
+                    <li>解决方案</li>
+                    <li class="open-map-parent">开放版图<img src="img/arrow_down.png">
+                        <div class="open-map">
+                            <div class="open-map-item">
+                                <ul>
+                                    <li>手淘无线</li>
+                                    <li>手淘无线开放</li>
+                                    <li>百川无线开放</li>
+                                </ul>
+                            </div>
+                            <div class="open-map-item open-map-item-flex">
+                                <ul>
+                                    <li>电商后台</li>
+                                    <li>第三方IT工具</li>
+                                    <li>商家后台系统</li>
+                                    <li>仓储管理系统</li>
+                                </ul>
+                                <ul>
+                                    <li class="blank">占位</li>
+                                    <li>国际商家后台系统</li>
+                                    <li>阿里旅行业务管理</li>
+                                    <li>服务商后台系统</li>
+                                </ul>
+                            </div>
+                            <div class="open-map-item">
+                                <ul>
+                                    <li>千牛插件</li>
+                                    <li>千牛开放业务</li>
+                                </ul>
+                            </div>
+                            <div class="open-map-item">
+                                <ul>
+                                    <li>其他</li>
+                                    <li>阿里大于</li>
+                                    <li>TVOS游戏应用</li>
+                                    <li>LBS开放平台</li>
+                                    <li>淘宝客-网站</li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    <li>文档中心<img src="img/arrow_down.png">
+                        <ul class="ul-nav-top-ul">
+                            <li>文档首页</li>
+                            <li>API文档</li>
+                            <li>消息文档</li>
+                        </ul>
+                    </li>
+                    <li>开发者服务<img src="img/arrow_down.png">
+                        <ul class="ul-nav-top-ul">
+                            <li>支持中心</li>
+                            <li>沙箱</li>
+                            <li>开发者论坛</li>
+                        </ul>
+                    </li>
+                    <li>开发者学院</li>
+                    <li>控制台</li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <div class="searchLogo">
+                    <img src="img/search_logo.png"/>
+                </div>
+                <div>登录</div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script>       
+        $(".nav-left li").hover(function(){
+            $(this).children("img").addClass("rotate-arrow");
+            $(this).children("ul").addClass("ul-show");
+
+        },function(){
+            $(this).children("img").removeClass("rotate-arrow");
+            $(this).children("ul").removeClass("ul-show");
+        });
+
+        $(".open-map-parent").hover(function(){
+            $(".open-map").addClass("openmap-show");
+        },function(){
+            $(".open-map").removeClass("openmap-show");
+        });
+    </script>
+</body>
+</html>

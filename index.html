@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+        <link href="css/reset.css" rel="stylesheet" type="text/css" />
+        <title>test html</title>     
+        <style>
+            .outer::before{
+                content:'';
+                position: absolute;
+                top:0;left:0;right:0;bottom:0;
+                background: url("img/train.jpg");
+                z-index: -1;
+            }
+            .outer{
+                position: relative;
+                width:700px;
+                height:550px;
+                display: flex;
+            }
+            .inner{
+                position: relative;
+                padding:30px;
+                margin: auto;  
+                background: rgba(55,110,12,.5) ;
+                background:
+                linear-gradient(-150deg,transparent 1.5em,rgba(55,110,12,.5) 0);
+                border-radius: .5em;
+                
+            }
+            .inner::before{
+                content:'';
+                position: absolute;
+                top:-1.3em;right:0;
+                background:linear-gradient(to left bottom,transparent 50%,rgba(0,0,0,.4) 0 ) 100% 0 no-repeat;
+                width:1.73em;
+                height:3em;
+                transform:rotate(-30deg);
+                transform-origin: bottom right;
+                border-bottom-left-radius: inherit;
+                box-shadow: -.2em .2em .3em -.1em rgba(0,0,0,.15);
+
+            }
+        </style>   
+    </head>
+    <body>
+        <div class="outer">
+            <div class="inner">
+                "The only way to get rid of a temptation is to yield to it.<br>
+                Resist it and your soul grows sick with longing for the 
+                <br>things it has forbidden to itself,
+                with desire for what its 
+                <br>monstrous laws have made monstrous and unlawful"
+                <footer>
+                    <cite>
+                        Oscar Wilde,
+                        The Picture of Dorian Gray
+                    </cite>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>
+

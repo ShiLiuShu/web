@@ -1,0 +1,99 @@
+body{
+    margin:0;
+    padding:0;
+
+}
+
+img{
+    border:0;
+}
+
+.container{
+    width:1000px;
+    margin:0 auto;
+    overflow:hidden;
+    margin-top:100px;
+}
+
+.img_box{
+    width:1000px;
+    overflow: hidden;
+    position: relative;
+}
+
+.img_list{
+    overflow: hidden;
+}
+
+.img_list img{
+    width:1000px;
+    float:left;
+}
+
+#btnLeft {  
+    /*padding: 30px;  */
+    background-color: transparent;  
+    position: absolute;  
+    top: 0px;  
+    left: 0px;
+    bottom:0px;  
+    color: #ffffff;  
+    font-weight: bold;  
+    font-size: 30px;  
+    cursor: pointer;  
+    padding-right:50px;
+    opacity: 0;
+    
+}  
+#btnRight {  
+    /*padding: 30px;  */
+    background-color: transparent;  
+    position: absolute;  
+    top: 0px;  
+    right: 0px;  
+    bottom:0px;
+    color: #ffffff;  
+    font-weight: bold;  
+    font-size: 30px;  
+    cursor: pointer;  
+    padding-left: 50px;
+    opacity: 0;
+}  
+#btnLeft:hover{
+    transition:opacity 1.5s ;
+    background-color: rgba(0,0,0,.3);
+    background-image: url("../img/left_arrow.png");
+    background-repeat: no-repeat;
+    background-position:left 2px top 50%;
+    opacity: 1;
+    
+}
+#btnRight:hover{
+    transition:opacity 1.5s ;
+    background-color: rgba(0,0,0,.3);
+    background-image: url("../img/right_arrow.png");
+    background-repeat: no-repeat;
+    background-position:right 2px top 50%;
+    opacity: 1;
+}
+
+.buttons {  
+    position: absolute;  
+    bottom: 5px;  
+    overflow: hidden;  
+    left: 50%;  
+    transform: translate3d(-50%,0,0);  
+}  
+.buttons div {  
+    width: 10px;  
+    height: 10px;  
+    background-color: #ffffff;  
+    float: left;  
+    margin-right: 10px;  
+    border: 1px solid #000000;  
+    border-radius: 50%;
+}  
+.buttons div.activeDiv {  
+    border: 1px solid #ffffff;  
+    background-color: #000000;  
+}  

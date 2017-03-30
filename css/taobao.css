@@ -1,0 +1,163 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.top_nav{
+    line-height: 64px;
+    background: rgba(0,0,0,.7);
+    display: flex;
+    padding:0 3em;
+}
+
+.logo{
+    font-size: 1em;
+    padding:0 3em;
+
+}
+.logo img{
+    width:3em; 
+    margin-right:.2em;
+    /*反色滤镜*/
+    filter:invert(1);
+}
+.logo a{
+    color:white;
+    text-decoration: none;
+    height:100%;
+    display: flex;
+    align-items: center;
+}
+.nav-left{    
+    flex-grow: 1;
+    font-size:.8em;
+}
+
+.ul-nav-top{
+    display: flex;
+    align-items: center;
+}
+
+ul.ul-nav-top-ul {
+    position: absolute;
+    background: rgba(0,0,0,1);
+    left:0;
+    right:.3em;
+    z-index:-1;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+/*开放版图栏目*/
+div.open-map{
+    display: flex;
+    position: absolute;
+    background: rgba(0,0,0,1);
+    left:-4em;
+    z-index:-1;
+    overflow: hidden;
+    visibility: hidden;
+}
+.open-map-item ul{
+    padding:.5em 3em;
+    width:8em;
+}
+.open-map-item li:first-child{
+    font-size: 1em;
+    color:#5eb5fe;
+    border-bottom: none;
+}
+.open-map-item-flex{
+    display: flex;
+    flex-direction: row;
+}
+.open-map-item li.blank{
+    visibility: hidden;
+} 
+
+/*下拉菜单栏目*/
+.ul-nav-top ul li{
+    background: rgba(0,0,0,1);
+    list-style-type: none;
+    color:#a3a3a3;
+    font-size: .9em;
+    line-height: 4.5em;
+    border-bottom:1px solid rgba(204,204,204,.2);
+}
+.ul-nav-top ul li:hover{
+    list-style-type: none;
+    color:#5eb5fe;  
+}
+
+
+/*下拉菜单ul显示类*/
+.ul-show{
+    /*visibility: hidden;*/
+    animation: dropdown-test .5s;
+    animation-fill-mode: forwards;
+}
+
+.openmap-show{
+    /*visibility: hidden;*/
+    animation: dropdown-open-map .5s;
+    animation-fill-mode: forwards;
+}
+
+
+/*calc的加号和减号两边要加空格哦兄弟*/
+
+.ul-nav-top>li{
+    padding: 0 1em 0 1em;
+    color:white;
+    list-style-type: none;
+    display: block;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    position: relative;
+}
+.nav-left li>img{
+    width:18%;
+    transition: transform .2s;
+    margin-left:.1em;
+}
+
+.rotate-arrow{
+    transform: rotate(180deg);
+    
+}
+
+.nav-left>ul>li:hover{
+    background-color: rgba(0,0,0,1);
+}
+
+.nav-right{
+    color:white;
+    margin:0 4em;
+    display: flex;
+    align-items: center;
+}
+.searchLogo{
+    display: flex;
+    align-items: center;
+}
+
+.nav-right img{
+    
+    margin-right:.5em;
+    width:2em;
+}
+
+
+
+/*动画*/
+@keyframes dropdown-test{
+    0% {top:100%;visibility: visible;height:0px} 
+    100% {top:100%;visibility: visible;height:13em;}
+}
+
+/*动画*/
+@keyframes dropdown-open-map{
+    0% {top:100%;visibility: visible;height:0px} 
+    100% {top:100%;visibility: visible;height:26em;}
+}
