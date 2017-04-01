@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>taobaoApi</title>
     <link rel="stylesheet" type="text/css" href="css/taobao.css">
+    <link rel="stylesheet" type="text/css" href="css/carousel.css">
 </head>
 <body>
     <div class="main">
@@ -82,23 +83,45 @@
                 
             </div>
         </div>
+        <div class="carousel">
+                <div class="container">
+                    <div class="img_box">
+                        <div class="img_list">
+                            <img src="img/1.jpg"/><img src="img/2.jpg"/>
+                        </div>
+
+                        <div id="btnLeft"></div>
+                        <div id="btnRight"></div>
+
+                        <div class="buttons"></div>
+                    </div>
+                 </div>
+        </div>
     </div>
     <script src="js/jquery.js"></script>
-    <script>       
-        $(".nav-left li").hover(function(){
-            $(this).children("img").addClass("rotate-arrow");
-            $(this).children("ul").addClass("ul-show");
+    <script src="js/carousel.js"></script>
+    <script>     
+         $(window).load(function(){
+            //要执行的js代码段
+            var lightbox=new LightBox();
 
-        },function(){
-            $(this).children("img").removeClass("rotate-arrow");
-            $(this).children("ul").removeClass("ul-show");
-        });
+            $(".nav-left li").hover(function(){
+                $(this).children("img").addClass("rotate-arrow");
+                $(this).children("ul").addClass("ul-show");
 
-        $(".open-map-parent").hover(function(){
-            $(".open-map").addClass("openmap-show");
-        },function(){
-            $(".open-map").removeClass("openmap-show");
+            },function(){
+                $(this).children("img").removeClass("rotate-arrow");
+                $(this).children("ul").removeClass("ul-show");
+            });
+
+            $(".open-map-parent").hover(function(){
+                $(".open-map").addClass("openmap-show");
+            },function(){
+                $(".open-map").removeClass("openmap-show");
+            });
         });
+          
+        
     </script>
 </body>
 </html>

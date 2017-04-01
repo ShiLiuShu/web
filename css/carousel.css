@@ -4,19 +4,21 @@ body{
 
 }
 
+.carousel{
+    width:100%;
+}
+
 img{
     border:0;
 }
 
 .container{
-    width:1000px;
-    margin:0 auto;
+    width:100%;
     overflow:hidden;
-    margin-top:100px;
 }
 
 .img_box{
-    width:1000px;
+    width:100%;
     overflow: hidden;
     position: relative;
 }
@@ -26,8 +28,8 @@ img{
 }
 
 .img_list img{
-    width:1000px;
     float:left;
+    width:0px;
 }
 
 #btnLeft {  
@@ -87,13 +89,13 @@ img{
 .buttons div {  
     width: 10px;  
     height: 10px;  
-    background-color: #ffffff;  
+    background-color: transparent;  
     float: left;  
     margin-right: 10px;  
-    border: 1px solid #000000;  
+    border: 1px solid #ffffff;  
     border-radius: 50%;
 }  
 .buttons div.activeDiv {  
     border: 1px solid #ffffff;  
-    background-color: #000000;  
+    background-color: #ffffff;  
 }  

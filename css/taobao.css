@@ -43,7 +43,7 @@ ul.ul-nav-top-ul {
     background: rgba(0,0,0,1);
     left:0;
     right:.3em;
-    z-index:-1;
+    z-index:999;
     visibility: hidden;
     overflow: hidden;
 }
@@ -54,7 +54,7 @@ div.open-map{
     position: absolute;
     background: rgba(0,0,0,1);
     left:-4em;
-    z-index:-1;
+    z-index:999;
     overflow: hidden;
     visibility: hidden;
 }

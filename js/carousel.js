@@ -1,11 +1,14 @@
 (function(){
     var LightBox=function(){
+        //这个地方滚动条的17px会惹祸哦
         var self=this;
-        imgWidth=$(".img_list img").width();
+        var img_box_width=$(".img_box").width();     
         imgNumber=$(".img_list img").size();
-        allWidth=imgWidth*(imgNumber+1);
+        allWidth=img_box_width*(imgNumber+1);
         console.log(allWidth);
         $(".img_list").width(allWidth);
+        $(".img_list img").width(img_box_width);
+        imgWidth=img_box_width;
 
         //给第一张图片添加class
         $(".img_list img:first").addClass("activeImg");
@@ -18,7 +21,6 @@
         $("#btnLeft").click(self.previousPic.bind(self));
         $("#btnRight").click(self.nextPic.bind(self));
         $(".buttons div").click(self.btnTab.bind(self));
-
 
         self.timer=self.startTimer();
 
