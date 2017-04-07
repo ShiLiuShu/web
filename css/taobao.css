@@ -149,6 +149,133 @@ div.open-map{
 }
 
 
+/*四项分栏*/
+.column-show{
+    display: flex;
+    padding:1em 3em;
+    margin: 0 auto ;
+    justify-content: center;
+    margin-bottom: 3em;
+
+}
+
+.column-item{
+    padding:.5em 1em;
+    width:15%;
+}
+
+.column-img{
+    text-align: center;
+}
+
+.column-text{
+    text-align: center;
+    color:#333333;
+    padding:0 2em;
+}
+
+.column-text:hover{
+    color:#5eb5fe;
+}
+
+.column-text h3{
+    margin:.1em 0 1em 0;
+    font-weight: normal;
+}
+
+.column-item img{
+    width:8em;
+}
+
+/*优势能力-三栏*/
+.goods{
+    background: url("../img/bg-mac.jpg") -30px -40px;
+    background-size:100%;
+    height:400px;
+    padding:2em 10em;
+}
+
+.goods h3{
+    color:white;
+    font-weight: normal;
+}
+
+.goods-main{
+    padding:3em 10em;
+    display: flex;
+    justify-content: center;
+}
+
+.goods-main-item{
+    padding:0 2em;
+    text-align: center;
+    color:white;
+}
+
+
+.item-img div.active{
+    opacity:1.0;
+}
+
+.item-img{
+     
+     text-align: center;
+}
+.item-text{
+    padding:.5em;
+    text-align: center;    
+    font-weight: normal;
+}
+
+.item-img div{
+    margin: 0 auto;
+    background: transparent;
+    width:max-content;
+    border:1.5px solid white;
+    border-radius:50%;
+    opacity: 0.5;
+}
+
+.item-img img{
+    margin:0 auto;
+    /*display:block用于去掉img自动生成的边距*/
+    /*如果此时变为block，那么text-align对图像就无效了*/
+    display: block; 
+    padding:.5em;
+}
+
+.item-text{
+    margin:1em 0 0 0;       
+    border-radius: .3em;
+}
+
+div.bg{
+    background: #111111;
+}
+
+.item-before{
+    position:relative;
+    z-index:0; 
+}
+
+.item-before::before{
+    position:absolute;
+    content:'';
+    top:-.3em;
+    left:calc(50% - .3em);
+    background: #111111;
+    transform: rotate(45deg);
+    padding:.35em;
+    z-index:-1;
+    
+}
+
+
+
+
+
+
+
 
 /*动画*/
 @keyframes dropdown-test{

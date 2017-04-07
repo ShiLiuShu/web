@@ -87,7 +87,7 @@
                 <div class="container">
                     <div class="img_box">
                         <div class="img_list">
-                            <img src="img/1.jpg"/><img src="img/2.jpg"/>
+                            <img src="img/1.jpg"/><img src="img/2.jpg"/><img src="img/3.jpg"/>
                         </div>
 
                         <div id="btnLeft"></div>
@@ -97,6 +97,89 @@
                     </div>
                  </div>
         </div>
+        <!--四项分栏-->
+        <div class="column-show">
+            <div class="column-item">
+                <div class="column-img">
+                    <img src="img/shoutaowuxian.png" alt="手淘无线"/>
+                </div>
+                <div class="column-text">
+                    <h3>手淘无线</h3>
+                    <p style="font-size:.8em">
+                        分享三亿月活跃用户、移动云基础设施，
+                        以及丰富的API、SDK组件等
+                    </p>
+                </div>
+            </div>
+            <div class="column-item">
+                <div class="column-img">
+                    <img src="img/dianshanghoutai.png" alt="电商后台"/>
+                </div>
+                <div class="column-text">
+                    <h3>电商后台</h3>
+                    <p style="font-size:.8em">
+                        服务千亿美元级市场的商家，为电商业务管理提供
+                        系统支持
+                    </p>
+                </div>
+            </div>
+            <div class="column-item">
+                <div class="column-img">
+                    <img src="img/qianniuchajian.png" alt="牵牛插件"/>
+                </div>
+                <div class="column-text">
+                    <h3>牵牛插件</h3>
+                    <p style="font-size:.8em">
+                        基于千万级卖家的千牛开放，向商家
+                        提供丰富的业务经营工具，打造千牛工作台
+                    </p>
+                </div>
+            </div>
+            <div class="column-item">
+                <div class="column-img">
+                    <img src="img/gengduoyewu.png" alt="更多业务"/>
+                </div>
+                <div class="column-text">
+                    <h3>更多业务</h3>
+                    <p style="font-size:.8em">
+                        了解其他的淘宝开放业务
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!--优势能力-三栏-->
+        <div class="goods">
+            <h3>优势能力</h3>
+            <div class="goods-main">
+                <div class="goods-main-item">
+                    <div class="item-img">
+                        <div><img src="img/goods-statics.png" /></div>
+                    </div>
+                    <div class="item-text">
+                        业务深度开放
+                    </div>
+                </div>
+                <div class="goods-main-item">
+                    <div class="item-img">
+                        <div><img src="img/goods-mobile.png" /></div>                      
+                    </div>
+                    <div class="item-text">
+                        移动化支持
+                    </div>
+                </div>
+                <div class="goods-main-item">
+                    <div class="item-img">
+                        <div><img src="img/goods-money.png" /></div>
+                    </div>
+                    <div class="item-text ">
+                        盈利模式清晰
+                    </div>
+                </div>
+            </div>
+            <div class="goods-text"></div>
+        </div>
+
     </div>
     <script src="js/jquery.js"></script>
     <script src="js/carousel.js"></script>
@@ -119,6 +202,17 @@
             },function(){
                 $(".open-map").removeClass("openmap-show");
             });
+
+            $(".goods-main-item").hover(function(){
+                $(this).find("div").addClass("active");
+                $(this).find(".item-text").addClass("bg");
+                $(this).find(".item-text").addClass("item-before");
+            },function(){
+                $(this).find("div").removeClass("active");
+                $(this).find(".item-text").removeClass("bg");
+                $(this).find(".item-text").removeClass("item-before");
+            });
+
         });
           
         
