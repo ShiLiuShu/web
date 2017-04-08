@@ -189,9 +189,8 @@ div.open-map{
 
 /*优势能力-三栏*/
 .goods{
-    background: url("../img/bg-mac.jpg") -30px -40px;
+    background: url("../img/bg-mac.jpg") ;
     background-size:100%;
-    height:400px;
     padding:2em 10em;
 }
 
@@ -231,6 +230,7 @@ div.open-map{
     margin: 0 auto;
     background: transparent;
     width:max-content;
+    width:-moz-min-content;
     border:1.5px solid white;
     border-radius:50%;
     opacity: 0.5;
@@ -270,6 +270,46 @@ div.bg{
     
 }
 
+.goods-text-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    display: none;
+    /*visibility: hidden;*/
+    opacity: 0;
+    transition: opacity 2s;
+    
+}
+
+.goods-text-item.show{
+    display: flex;
+    /*visibility: visible;*/
+    opacity: 1;
+}
+
+
+
+.goods-text-item-ul{
+    margin-right:400px;
+    transition: margin-right 1s;
+}
+
+.goods-text-item-ul.show{
+    margin-right:0;
+}
+
+.goods-text-item-ul li{
+    padding:.5em;
+    color:white;
+    font-size:.8em;
+}
+
+.goods-text-item-img{
+    
+}
+
+
 
 
 
@@ -288,3 +328,4 @@ div.bg{
     0% {top:100%;visibility: visible;height:0px} 
     100% {top:100%;visibility: visible;height:26em;}
 }
+

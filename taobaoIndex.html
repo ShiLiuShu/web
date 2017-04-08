@@ -177,7 +177,47 @@
                     </div>
                 </div>
             </div>
-            <div class="goods-text"></div>
+            <div class="goods-text">
+                <div class="goods-text-item show">
+                    <div class="goods-text-item-ul show">
+                        <ul>
+                            <li>开放1000余个API，覆盖电商、支付、LBS、数字娱乐、广告、健康等能力</li>
+                            <li>开放淘宝账号授权，连接超过3亿月活跃用户的强大购买力</li>
+                            <li>开放电商管理能力，支撑1000亿美元级市场的商家IT管理需求</li>
+                            <li>开放云能力，基于PC/无线业务提供差异化方案</li>
+                        </ul>
+                    </div>
+                    <div class="goods-text-item-img">
+                        <img src="img/goods-1.png" />
+                    </div>
+                </div>
+                <div class="goods-text-item">
+                    <div class="goods-text-item-ul">
+                        <ul>
+                            <li>12345</li>
+                            <li>开放淘宝账号授权，连接超过3亿月活跃用户的强大购买力</li>
+                            <li>开放电商管理能力，支撑1000亿美元级市场的商家IT管理需求</li>
+                            <li>开放云能力，基于PC/无线业务提供差异化方案</li>
+                        </ul>
+                    </div>
+                    <div class="goods-text-item-img">
+                        <img src="img/goods-1.png" />
+                    </div>
+                </div>
+                <div class="goods-text-item">
+                    <div class="goods-text-item-ul">
+                        <ul>
+                            <li>78906</li>
+                            <li>开放淘宝账号授权，连接超过3亿月活跃用户的强大购买力</li>
+                            <li>开放电商管理能力，支撑1000亿美元级市场的商家IT管理需求</li>
+                            <li>开放云能力，基于PC/无线业务提供差异化方案</li>
+                        </ul>
+                    </div>
+                    <div class="goods-text-item-img">
+                        <img src="img/goods-1.png" />
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -187,6 +227,7 @@
          $(window).load(function(){
             //要执行的js代码段
             var lightbox=new LightBox();
+            var currentGoodsItemIndex=0;
 
             $(".nav-left li").hover(function(){
                 $(this).children("img").addClass("rotate-arrow");
@@ -207,11 +248,26 @@
                 $(this).find("div").addClass("active");
                 $(this).find(".item-text").addClass("bg");
                 $(this).find(".item-text").addClass("item-before");
+
+                $(".goods-text-item").eq(currentGoodsItemIndex).removeClass("show");
+                $(".goods-text-item-ul").eq(currentGoodsItemIndex).removeClass("show");
+
+                var i=$(this).index();
+                currentGoodsItemIndex=i;
+                $(".goods-text-item").eq(i).addClass("show");
+                $(".goods-text-item-ul").eq(i).addClass("show");
+
+
             },function(){
                 $(this).find("div").removeClass("active");
                 $(this).find(".item-text").removeClass("bg");
                 $(this).find(".item-text").removeClass("item-before");
+
+                // var i=$(this).index();
+                // $(".goods-text-item").eq(i).removeClass("show");
+                // $(".goods-text-item-ul").eq(i).removeClass("show");
             });
+
 
         });
           
