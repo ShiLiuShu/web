@@ -270,8 +270,10 @@ div.bg{
     
 }
 
+
+
 .goods-text-item{
-    display: flex;
+    /*display: flex;*/
     justify-content: center;
     align-items: center;
 
@@ -295,8 +297,13 @@ div.bg{
     transition: margin-right 1s;
 }
 
-.goods-text-item-ul.show{
+.goods-text-item-ul.margin{
     margin-right:0;
+    transition: margin-right 1s;
+}
+
+.goods-text-item-ul.show{
+    margin-right:400px;
 }
 
 .goods-text-item-ul li{

@@ -251,11 +251,14 @@
 
                 $(".goods-text-item").eq(currentGoodsItemIndex).removeClass("show");
                 $(".goods-text-item-ul").eq(currentGoodsItemIndex).removeClass("show");
+                $(".goods-text-item-ul").eq(currentGoodsItemIndex).css("margin-right","400px");
 
                 var i=$(this).index();
                 currentGoodsItemIndex=i;
                 $(".goods-text-item").eq(i).addClass("show");
                 $(".goods-text-item-ul").eq(i).addClass("show");
+                $(".goods-text-item-ul").eq(i).css("margin-right","0");
+
 
 
             },function(){
@@ -263,12 +266,13 @@
                 $(this).find(".item-text").removeClass("bg");
                 $(this).find(".item-text").removeClass("item-before");
 
-                console.log("test");
-
                 // var i=$(this).index();
                 // $(".goods-text-item").eq(i).removeClass("show");
                 // $(".goods-text-item-ul").eq(i).removeClass("show");
             });
+            
+            var goods_height=$(".goods-text-item.show").height();
+            $(".goods-text").height(goods_height);
 
 
         });
